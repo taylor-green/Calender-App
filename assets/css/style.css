@@ -2,7 +2,8 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
   }
-  
+
+
   textarea {
     background: transparent;
     border: none;
@@ -31,7 +32,7 @@ body {
   }
   
   .past {
-    background-color: #d3d3d3;
+    background-color: #817f7f;
     color: white;
   }
   
