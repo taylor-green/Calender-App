@@ -2,14 +2,18 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(document).ready(function(){
-    var rightNow = moment().format("MMMM DD, YYYY");
+    var rightNow = day.js().format("MMMM DD, YYYY");
     var displayDate = document.getElementById('currentDay');
     displayDate.innerHTML = rightNow;
-    var currentHour = moment().format('HH');
+    var currentHour = day.js().format('HH');
     
-    $()
+    $('#clearfieldsBtn').click(function(event){
+        event.preventDefault;
+        $('textarea').val('');
+        localStorage.clear();
+    })
 })
-var time = moment();
+var time = day.js();
 
 $(function () {
     // TODO: Add a listener for click events on the save button. This code should
