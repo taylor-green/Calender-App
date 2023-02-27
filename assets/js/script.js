@@ -2,10 +2,12 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(document).ready(function(){
-    var rightNow = day.js().format("MMMM DD, YYYY");
+    var rightNow = dayjs().format('MMMM DD, YYYY');
     var displayDate = document.getElementById('currentDay');
     displayDate.innerHTML = rightNow;
-    var currentHour = day.js().format('HH');
+    var currentHour = dayjs().format('h:mm');
+    var displayTime = document.getElementById('currentHour');
+    displayTime.innerHTML = currentHour;
     
     $('#clearfieldsBtn').click(function(event){
         event.preventDefault;
@@ -14,6 +16,22 @@ $(document).ready(function(){
     })
 })
 var time = day.js();
+
+$('.time-block').each(function (){
+    var timeBlock = $(this).attr('id').split('-')[1];
+
+    if (currentHour == timeBlock){
+        $(this).addClass('present');
+
+    } else if (currentHour < timeBlock){
+        $(this).removeClass('present');
+        $(this).addClass('future');
+
+    } else if (currentHour > timeBlock){
+        $(this).removeClass('future');
+        $(this).addClass('past');
+    }
+});
 
 $(function () {
     // TODO: Add a listener for click events on the save button. This code should
