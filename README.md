@@ -17,17 +17,17 @@ I utilized VS Code in order to modify the exisiting HTML, CSS, and JS files to c
 Applied functions and concepts recently learned to use local storage to store the users info in the application. Other features include the following:
 
 
--The timer begins counting down when the first question appears
--User selects an answer and is awarded 20 points if correct
--Qurstions cycle through after each choice is made
--Ends at High Scores page
--High Scores page linked to Home page
+-The user can utilize time blocks from 9AM - 5PM and insert text accordingly
+-Time blocks are color coded by past, present, and future 
+(gray, red, green)
+-Local storage saves the users data
+-Clear fields button allows user to clear all data and begin again
 
 
 ## Mock-Up
 
 
-![The following image shows the web application's appearance and functionality:](./Assets/coding.quiz.png)
+![The following image shows the web application's appearance and functionality:](assets/calendar-app.png)
 
 
 The user can click the "Start Quiz" button to play the quiz game

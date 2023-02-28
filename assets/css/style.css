@@ -3,7 +3,7 @@ body {
     font-size: 16px;
   }
 
-/* time block text fields */
+
   textarea {
     background: transparent;
     border: none;
@@ -13,6 +13,7 @@ body {
   }
 /* header area */
   .jumbotron{
+    
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -21,7 +22,7 @@ body {
   }
 
   #clearFieldsBtn{
-    background-color:#04a6f7;
+    background-color:#015f8e;
   }
 
   
@@ -42,17 +43,17 @@ body {
     color: #015e8c;
     border-top: 1px dashed #000000;
   }
-  /* makes text field gray */
+  /* makes text field in time block gray */
   .past {
     background-color: #817f7f;
     color: white;
   }
-  /* makes text field red */
+  /* makes text field in time block red */
   .present {
     background-color: #ff6961;
     color: white;
   }
-  /* makes text field green */
+  /* makes text field in time block green */
   .future {
     background-color: #77dd77;
     color: white;
