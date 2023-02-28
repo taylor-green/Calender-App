@@ -12,6 +12,14 @@ $(document).ready(function(){
         }
       });
 
+    //event listener to store the data in local
+      $(".saveBtn").click(function (event) {
+        event.preventDefault();
+        var value = $(this).siblings(".description").val();
+        var time = $(this).parent().attr("id");
+        localStorage.setItem(time, value);
+      });
+
 // displays date and time in header
     var rightNow = dayjs().format('MMMM DD, YYYY');
     var displayDate = document.getElementById('currentDay');
@@ -20,36 +28,74 @@ $(document).ready(function(){
     var displayTime = document.getElementById('currentHour');
     displayTime.innerHTML = currentHour;
     
-    $('#clearfieldsBtn').click(function(event){
-        event.preventDefault;
+    $('#clearFieldsBtn').click(function(event){
+        event.preventDefault();
         $('textarea').val('');
         localStorage.clear();
     })
+    
 })
 
 
-$('.time-block').each(function (){
-    var timeBlock = $(this).attr('class').split('-')[1];
 
-    if (currentHour == timeBlock){
-        $(this).addClass('present');
+function updateColors() {
+    var currentTime = dayjs().format('h');
+    $(".time-block").each(function() {
+      var timeBlock = parseInt($(this).attr("id").split("-")[1]);
+      if (timeBlock < currentTime) {
+        $(this).removeClass('present future').addClass('past');
+      }
+      else if (timeBlock === currentTime) {
+        $(this).removeClass('past future').addClass('present');
+      }
+      else {
+        $(this).removeClass('past present').addClass('future');
+      }
+    });
+    console.log(currentTime);
+    console.log(timeBlock);
+  }
 
-    } else if (currentHour < timeBlock){
-        $(this).removeClass('present');
-        $(this).addClass('future');
+  // Update time block colors every minute
+  setInterval(updateColors, 6000);
 
-    } else if (currentHour > timeBlock){
-        $(this).removeClass('future');
-        $(this).addClass('past');
-    }
-});
+  // Initialize the app
+  updateColors();
 
-$(".saveBtn").click(function (event) {
-    event.preventDefault();
-    var value = $(this).siblings(".description").val();
-    var time = $(this).parent().attr("id");
-    localStorage.setItem(time, value);
-  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $('.time-block').each(function (){
+//     var timeBlock = parseInt($(this).attr('class').split('-')[1]);
+
+//     if (currentHour == timeBlock){
+//         $(this).addClass('present');
+
+//     } else if (currentHour < timeBlock){
+//         $(this).removeClass('present');
+//         $(this).addClass('future');
+
+//     } else if (currentHour > timeBlock){
+//         $(this).removeClass('future');
+//         $(this).addClass('past');
+//     }
+// });
+
+
 
 // $(function () {
 //     // TODO: Add a listener for click events on the save button. This code should
