@@ -3,7 +3,7 @@ body {
     font-size: 16px;
   }
 
-
+/* time block text fields */
   textarea {
     background: transparent;
     border: none;
@@ -11,9 +11,8 @@ body {
     color: #024465;
     border-left: 1px solid #028cd1
   }
-
+/* header area */
   .jumbotron{
-    
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -43,17 +42,17 @@ body {
     color: #015e8c;
     border-top: 1px dashed #000000;
   }
-  
+  /* makes text field gray */
   .past {
     background-color: #817f7f;
     color: white;
   }
-  
+  /* makes text field red */
   .present {
     background-color: #ff6961;
     color: white;
   }
-  
+  /* makes text field green */
   .future {
     background-color: #77dd77;
     color: white;
