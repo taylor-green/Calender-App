@@ -30,9 +30,9 @@ Applied functions and concepts recently learned to use local storage to store th
 ![The following image shows the web application's appearance and functionality:](assets/calendar-app.png)
 
 
-The user can click the "Start Quiz" button to play the quiz game
+The user can begin typing text into any time block then click the save button to save the data. 
 The webpage can be found at 
- https://taylor-green.github.io/Coding-Quiz/
+ https://taylor-green.github.io/Calender-App/
 
 ## License
 
